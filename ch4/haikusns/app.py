@@ -18,7 +18,7 @@ def index():
 def login():
     return render_template('login_form.html')
 
-@app.rout('/login/try')
+@app.route('/login/try')
 def login_try():
     ok = user.try_login(request.form)
     if not ok:
