@@ -38,8 +38,8 @@ def users(user_id):
     me = user.get_id()
     return render_template('users.html',
                            user_id=user_id, id=me,
-                           is_fav=data.is_fav(me, fav_id),
-                           text_list=data.get_text_table(user_id))
+                           is_fav=data.is_fav(me, user_id),
+                           text_list=data.get_text(user_id))
 
 @app.route('/fav/add/<user_id>')
 @user.login_required

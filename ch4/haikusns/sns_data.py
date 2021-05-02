@@ -17,7 +17,7 @@ def add_fav(id, fav_id):
 
 def is_fav(id, fav_id):
     table, q = get_fav_table()
-    a = table.search((q.id == id) & (q.fav_id == fav_id))
+    a = table.get((q.id == id) & (q.fav_id == fav_id))
     return a is not None
 
 def remove_fav(id, fav_id):
