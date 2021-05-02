@@ -34,7 +34,7 @@ def try_logout():
 
 def login_required(func):
     @wraps(func)
-    def wrapper(*args, **Kwargs):
+    def wrapper(*args, **kwargs):
         if not is_login():
             return redirect('/login')
         return func(*args, **kwargs)

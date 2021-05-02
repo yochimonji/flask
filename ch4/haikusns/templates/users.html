@@ -1,0 +1,28 @@
+{% extends "layout_login.html" %}
+
+{% block title %}
+    {{ user_id }}さんの俳句ページ
+{% endblock %}
+
+{% block contents %}
+    <div class="box_c">
+        {% if is_fav %}
+            👉<a href="/fav/remove/{{ user_id }}" class="pure-button">お気に入りを外す</a>
+        {% else %}
+            <a href="/fav/add/{{ user_id }}" class="pure-button">お気に入りにする</a>
+        {% endif %}
+    </div>
+
+    <h3>作品</h3>
+    {% if text_list | length == 0 %}
+        <p>作品はまだありません。</p>
+    {% endif %}
+    <div class="haiku-list">
+        {% for t in text_list %}
+            <div class="haiku">
+                {{ t.text | linebreak }}
+                <p class="info">{{ t.time | datestr }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
