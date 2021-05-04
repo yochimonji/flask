@@ -90,4 +90,4 @@ def datestr_fiter(s):
     return time.strftime('%Y 年 %m 月 %d 日 ', time.localtime(s))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
