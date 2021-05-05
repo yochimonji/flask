@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3
 
-RUN apt-get update -y && apt-get install python3 python3-pip -y
-RUN pip3 install flask tinydb Pillow
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
