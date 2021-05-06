@@ -32,7 +32,7 @@ def index():
 @user.login_required
 def album_show(album_id):
     return render_template('album.html',
-        album=phto_db.get_album(album_id),
+        album=photo_db.get_album(album_id),
         photos=photo_db.get_album_files(album_id))
 
 @app.route('/user/<user_id>')

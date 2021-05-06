@@ -16,7 +16,7 @@
                 <label for="album">アルバムの選択：</label>
                 <select name="album" id="album">
                     <option value="0">なし</option>
-                    {% for i in album %}
+                    {% for i in albums %}
                         <option value="{{ i.album_id }}">{{ i.name }}</option>
                     {% endfor %}
                 </select>
