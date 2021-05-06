@@ -1,4 +1,4 @@
 __pycache__
 app/ch4/fileshare/files
 app/ch4/photoshare/files
-app/ch4/photoshare/data
+app/ch4/photoshare/data/photos.sqlite3
