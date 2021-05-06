@@ -16,12 +16,12 @@ def login_try():
         return msg('ログイン失敗')
     return redirect('/')
 
-@app.rout('/logout')
+@app.route('/logout')
 def logout():
     user.try_logout()
     return msg('ログアウトしました')
 
-@app.rout('/')
+@app.route('/')
 @user.login_required
 def index():
     return render_template('index.html',
@@ -32,7 +32,7 @@ def index():
 @user.login_required
 def album_show(album_id):
     return render_template('album.html',
-        album=phto_db.get_album(album_id)
+        album=phto_db.get_album(album_id),
         photos=photo_db.get_album_files(album_id))
 
 @app.route('/user/<user_id>')

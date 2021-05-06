@@ -1,2 +1,4 @@
 __pycache__
-ch4/fileshare/files
+app/ch4/fileshare/files
+app/ch4/photoshare/files
+app/ch4/photoshare/data
